@@ -12,21 +12,21 @@ project_goal: 1500
 # If you want to edit the FAQ, head over to app/views/preorder/homepage/_faqs.html.erb
 
 # This'll be both the page title (<title></title>) and the name in the header
-product_name: "Help Hitchwiki"
+product_name: "Help to organize a Hitchwiki Hackathon"
 
 # This will be used in sentences like Hooray You've just reserved product_description
 product_description: "Hitchwiki love"
 
 # An image showcasing your product -- it'll show up when you pin your product
 # It should be in app/assets/images
-product_image_path: "my-product-image.png"
+product_image_path: "badge.png"
 
 # The message on the preorder page, Lockitron's is ""
 value_proposition: "Help Hitchwiki team to do the next big thing!"
 
 # YouTube or Vimeo Video URL (The embed URL, without the query string options)
 # Replace /embed/ in your video url path with /v/ for video playback to work.
-video_embed_url: "https://www.youtube.com/v/JOWdQCdBRss"
+video_embed_url: "//www.youtube.com/v/RkTNdi8V5es"
 
 # If set to true, then the image at "/assets/video_placeholder.png" will be shown in place of the youtube
 # video.  When the user clicks it, the vid will replace the image and start playing.
@@ -48,7 +48,7 @@ price: 	19.95
 # put code in seeds.rb, then run rake db:seed
 use_payment_options: false
 
-payment_description: "You really should change this text because people will see it on Amazon's order page!!!!!"
+payment_description: "Help to organize Hitchwiki hackathon in Turkey."
 
 # Amazon limits how much we can charge people with their Multi-Use tokens.
 # You probably should add some leeway to account for international shipping
@@ -74,15 +74,15 @@ progress_text: "Implemented"
 # Call to action section
 
 # On Lockitron, it's "First Batch Ships in March 2013"
-ships: "Work time: Nov—Dec"
+ships: "Help to organize Hitchwiki hackathon in Turkey."
 
 # On Lockitron, it's "Reserve Now"
-call_to_action: "Donate Now"
+call_to_action: "Donate"
 # On Lockitron, this is "Only $149 for a limited time"
-price_human: "Lorem ipsum"
+price_human: "Bank transfers, bitcoins & credit cards."
 
 # The paragraph below the price. You'd probably say something about how you're not going to charge them before it ships (so it's less risky).
-dont_give_them_a_reason_to_say_no: "Lorem ipsum dolor sit ametin dolor sit ametius dolor sit amet..."
+dont_give_them_a_reason_to_say_no: "Note that the donation bar is updated manually and it might take a while before your donation shows up."
 
 # Social Stuff
 facebook_app_id: "139879862696959"

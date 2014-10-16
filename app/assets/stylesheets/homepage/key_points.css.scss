@@ -8,6 +8,9 @@
 
 .point_copy {
   width: 440px;
+  &.full {
+    width: auto;
+  }
   @media (max-width: $wrapper_breakpoint) {
     width: auto;
     padding-left: 50px;
@@ -15,6 +18,19 @@
   }
   h3 {
     margin: 20px 0 30px 0;
+  }
+  ul {
+    margin-left: 20px;
+    li {
+      list-style: circle;
+      margin-bottom: 5px;
+    }
+  }
+  i, em {
+    font-style: italic;
+  }
+  b, strong {
+    font-weight: bold;
   }
 }
 
@@ -29,39 +45,73 @@ h3 {
     line-height: 1.5;
 }
 
-#one {
-  background: url(image_path("1-background.png")) no-repeat bottom left;
-  height: 320px;
-  width: $wrapper_width;
+#roof {
+  background: $orange1 url(image_path("lisbon-roof.jpg")) no-repeat 50% 60%;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  .wrapper {
+    min-height: 320px;
+    width: $wrapper_width;
+    @media (max-width: $wrapper_breakpoint) {
+      width: 100%;
+    }
+  }
+}
+
+.darkbox {
+  background: rgba(0,0,0,0.7);
+  padding: 20px 20px 30px 20px;
+  &, h3, h4 {
+    color: #fff;
+    line-height: 1.3em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  }
+}
+
+
+#plan {
+  background: $orange1;
+  h3 {
+    text-align: center;
+  }
+  h2, h3, h4, h5 {
+    color: #111;
+  }
+  a {
+    color: #111;
+    text-decoration: underline;
+  }
+  overflow: hidden;
+  clear: both;
+  padding: 0 0 50px 0;
+}
+
+#team {
+  h3 {
+    text-align: center;
+  }
+  min-height: 320px;
+}
+
+.bread,
+.bread * {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.half {
+  width: 48%;
+}
+.left {
+  float: left;
   @media (max-width: $wrapper_breakpoint) {
-    width: 100%;
+    float: none;
   }
 }
-
-#two {
-  background: url(image_path("2-background.png")) no-repeat bottom left;
-  height: 320px;
-}
-
-#three {
-  background: url(image_path("3-background.png")) no-repeat bottom left;
-  height: 320px;
-}
-
-#four {
-  background: url(image_path("4-background.png")) no-repeat bottom left;
-  height: 320px;
-}
-
-@media (max-width: $mobile_breakpoint) {
-  #one, #two, #three, #four {
-    height: auto;
-  }
-}
-
 .right {
-  margin-left: 500px;
+  float: right;
   @media (max-width: $wrapper_breakpoint) {
-    margin-left: 0;
+    float: none;
   }
 }
