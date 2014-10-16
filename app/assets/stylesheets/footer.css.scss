@@ -1,6 +1,9 @@
 .footer
 {
   padding: 40px 0;
+  @media (max-width: $wrapper_breakpoint) {
+    padding: 40px;
+  }
   ul
   {
     float: left;
