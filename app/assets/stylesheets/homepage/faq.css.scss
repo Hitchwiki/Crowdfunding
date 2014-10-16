@@ -24,6 +24,16 @@
         margin-top: 10px;
         line-height: 1.4;
         font-size: 18px;
+        a {
+          color: #111;
+          text-decoration: underline;
+        }
+        b, strong {
+          font-weight: bold;
+        }
+        i, em {
+          font-style: italic;
+        }
       }
       @media (max-width: $wrapper_breakpoint) {
         width: 100%;

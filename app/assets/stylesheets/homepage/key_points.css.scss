@@ -115,3 +115,17 @@ h3 {
     float: none;
   }
 }
+
+#history {
+  summary {
+    padding-left: 18px;
+    background: url(image_path("bullet.png")) no-repeat left 8px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #666;
+  }
+  .bread {
+    border-left: 5px solid #eee;
+    padding-left: 20px;
+  }
+}
