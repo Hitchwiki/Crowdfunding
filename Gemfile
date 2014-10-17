@@ -28,6 +28,10 @@ group :development, :test do
   gem 'shoulda'
 end
 
+# Static files
+source :rubygems
+gem 'rack'
+
 # jQuery
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

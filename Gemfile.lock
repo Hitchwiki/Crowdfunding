@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (4.0.0)
       actionpack (= 4.0.0)
@@ -155,6 +156,7 @@ DEPENDENCIES
   json (~> 1.7.7)
   pg
   pry-rails
+  rack
   rails (= 4.0.0)
   rails_12factor
   rails_config
