@@ -19,7 +19,7 @@ product_description: "Hitchwiki love"
 
 # An image showcasing your product -- it'll show up when you pin your product
 # It should be in app/assets/images
-product_image_path: "badge.png"
+product_image_path: "/images/badge.png"
 
 # The message on the preorder page, Lockitron's is ""
 value_proposition: "Help Hitchwiki team to do the next big thing!"
@@ -88,7 +88,7 @@ dont_give_them_a_reason_to_say_no: "Note that the donation bar is updated manual
 facebook_app_id: "139879862696959"
 # Tweets are prefixed with "I'm #{Settings.primary_stat} number X for #{Settings.product_name}"
 # Maybe mention something about your product vision -- e.g. "to replace keys with my phone"
-tweet_text: "to crowdfund"
+tweet_text: ""
 
 # Google Analytics
 google_id: "UA-149779-13"
