@@ -14,24 +14,30 @@
   }
   #checkout
   {
-    #email
+    input
     {
       padding: 15px;
+      margin: 5px 0;
       border-radius: 10px;
       border: 1px solid #CCC;
-      width: 350px;
+      width: auto;
       outline: none;
     }
     .invalid
       {
       border: 1px solid orange;
     }
-    #amazon_button
+    #checkout_button
     {
       margin-top: 5px;
       padding: 15px;
       border: none;
     }
+  }
+  #payment_errors
+  {
+    display: none;
+    color: red;
   }
 }
 
@@ -64,7 +70,7 @@
       }
     }
   }
-  #amazon_button
+  #checkout_button
   {
     display: inline !important;
   }
@@ -216,6 +222,11 @@
       }
     }
   }
+}
+
+.cards {
+  color: #474747;
+  font-size: 11px;
 }
 
 .sidebar

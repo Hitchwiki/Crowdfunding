@@ -31,7 +31,7 @@ class Order < ActiveRecord::Base
       @order.zip             = options[:zip]
       @order.phone           = options[:phoneNumber]
       @order.country         = options[:country]
-      @order.expiration      = Date.parse(options[:expiry])
+      @order.expiration      = Date.parse(options[:expiry]) if !options[:expiry].nil?
       @order.save!
 
       @order
@@ -72,7 +72,7 @@ class Order < ActiveRecord::Base
       PaymentOption.joins(:orders).where("token != ? OR token != ?", "", nil).pluck('sum(amount)')[0].to_f
     else
       Order.completed.sum(:price).to_f
-    end 
+    end
   end
 
   validates_presence_of :name, :price, :user_id
