@@ -9,10 +9,27 @@
 <div class="gray_background">
   <div class="wrapper clearfix">
     <div class="main_content <%= "payment_options" if Settings.use_payment_options %>">
+
       <h3>Donate</h3>
-      <p>
-        <br />
-        <br />
+      <br><br>
+
+      <div class="payment-creditcard">
+
+        <h4>Credit cards</h4>
+
+        <small class="payment-description">
+          <% if Settings.payment_processor == "stripe" %>
+           <p>
+             Payment processor will take 2.9% + 30c from donation sum so do this only if you can't do EU bank transfer, please. All of your payment information will be secured and stored with <a href="https://stripe.com/de">Stripe</a>.
+             <br><br>
+             <small>Cards: Visa, MasterCard, or American Express.</small>
+           </p>
+
+          <% else %>
+           <p>All of your payment information will be secured and stored with Amazon Payments. If you don't have an Amazon account, simply select "I'm a new Customer" on the next page.</p>
+          <% end %>
+        </small>
+
         <%
         if Settings.payment_processor == "stripe"
           details = "details"
@@ -38,11 +55,9 @@
               <%= email_field_tag "email", nil, :placeholder => "Email address", :required => "required", :id => "email" %>
               <% if Settings.payment_processor == "stripe" %>
                 <%= text_field_tag "card_number", nil, :placeholder => "Card Number", :required => "required", :id => "card_number" %>
-                <br>
-                <small class="cards">Visa, MasterCard, or American Express</small>
-                <br>
-
                 <%= text_field_tag "cvv", nil, :placeholder => "CVV", :required => "required", :id => "cvv" %>
+                <small class="cvv"><a href="https://www.cvvnumber.com/cvv.html" target="_blank">?</a></small>
+
                 <%= text_field_tag "expires", nil, :placeholder => "Expires mm/yyyy", :required => "required", :id => "expires" %>
                 <%= hidden_field_tag :stripe_token %>
                 <%= submit_tag "Donate", :class => "blue_button", :id => "checkout_button" %>
@@ -56,22 +71,41 @@
         </div>
       <% end %>
 
-      <br><br>
-      <small class="secure clearfix">
-        <% if Settings.payment_processor == "stripe" %>
-         All of your payment information will be secured and stored with Stripe.
-        <% else %>
-         All of your payment information will be secured and stored with Amazon Payments. If you don't have an Amazon account, simply select "I'm a new Customer" on the next page.
-        <% end %>
-      </small>
-
       <br />
       <div id="payment_errors">
         Something went wrong, please check all your details are correct.
         <br />
         <span id="payment_errors_info" />
       </div>
+
     </div>
-    <%= render 'preorder/checkout/sidebar' %>
+    <!-- /Credit card -->
+
+  <div class="payment-sepa">
+    <h4>Bank transfer (SEPA)</h4>
+    <p><em>Easiest option for Europeans</em>
+      <br><br>
+
+      IBAN: <span class="numbers">123 123</span><br>
+      BIC/Swift: <span class="numbers">123123</span>
+
+      <br><br>
+      <em>Please note that it'll take a couple of days for these to register and become visible at the donation bar.</em>
+
+    </p>
+  </div>
+  <!-- /SEPA -->
+
+  <div class="payment-bitcoin">
+    <h4>Bitcoins</h4>
+    <p>
+      <span class="numbers">123123</span>
+      <br><br>
+      <em>Please note that it'll take a couple of days for these to register and become visible at the donation bar.</em>
+    </p>
+
+  </div>
+  <!-- /Bitcoins -->
+
   </div>
 </div>

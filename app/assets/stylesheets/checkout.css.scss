@@ -1,7 +1,5 @@
 .main_content
 {
-  width: 560px;
-  float: left;
   h3
   {
     margin-bottom: 30px;
@@ -32,6 +30,10 @@
       margin-top: 5px;
       padding: 15px;
       border: none;
+      cursor: pointer;
+    }
+    .cvv {
+      color: #eee;
     }
   }
   #payment_errors
@@ -223,10 +225,29 @@
     }
   }
 }
+.payment-creditcard {
+}
 
-.cards {
-  color: #474747;
-  font-size: 11px;
+.payment-bitcoin,
+.payment-creditcard,
+.payment-sepa {
+    width: 400px;
+    float: left;
+    margin: 0 40px 40px 0;
+    .numbers {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    }
+}
+
+.payment-description {
+  display: block;
+  font-size: 15px;
+  padding-bottom: 15px;
+  clear: both;
+  overflow: hidden;
+  a {
+    color: $brown;
+  }
 }
 
 .sidebar
