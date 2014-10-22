@@ -1,6 +1,5 @@
 <% if Settings.payment_processor == "stripe" %>
   <%= javascript_include_tag "https://js.stripe.com/v1/" %>
-  <%= javascript_include_tag "checkout.js" %>
   <script>
     Stripe.setPublishableKey("<%= ENV['STRIPE_PUBLIC_KEY'] || Settings.stripe_public_key %>")
   </script>
@@ -56,11 +55,14 @@
               <% if Settings.payment_processor == "stripe" %>
                 <%= text_field_tag "card_number", nil, :placeholder => "Card Number", :required => "required", :id => "card_number" %>
                 <%= text_field_tag "cvv", nil, :placeholder => "CVV", :required => "required", :id => "cvv" %>
-                <small class="cvv"><a href="https://www.cvvnumber.com/cvv.html" target="_blank">?</a></small>
-
-                <%= text_field_tag "expires", nil, :placeholder => "Expires mm/yyyy", :required => "required", :id => "expires" %>
+                <div class="expires">
+                Expires: <%= select_tag "expires_month", options_for_select( 01.upto(12).to_a , "01"), :required => "required", :id => "expires_month" %>
+                /
+                <%= select_tag "expires_year", options_for_select( 2014.upto(2029).to_a , "2014"), :required => "required", :id => "expires_year" %>
+                </div>
                 <%= hidden_field_tag :stripe_token %>
                 <%= submit_tag "Donate", :class => "blue_button", :id => "checkout_button" %>
+                <div id="checkout_loading">Wait...</div>
               <% else %>
                 <%= hidden_field_tag "preorder", true %>
                 <%= hidden_field_tag "quantity", params[:quantity] %>

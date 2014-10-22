@@ -1,6 +1,6 @@
 module PreorderHelper
   def like_button(width = 70, show_faces = false)
-    raw "<div class=\"fb-like\" data-send=\"false\" data-width=\"#{width}\" data-layout=\"box_count\" data-show-faces=\"true\"></div>"
+    raw "<div class=\"fb-like\" data-send=\"false\" data-width=\"#{width}\" data-layout=\"button_count\" data-show-faces=\"true\" data-href=\"#{encoded_root_url}\"></div>"
   end
   def pin_it_button
     image_url = URI.encode("#{request.scheme}://#{request.host}#{image_path(Settings.product_image_path)}")
@@ -23,7 +23,8 @@ module PreorderHelper
   end
 
   def encoded_root_url
-    raw URI.encode "#{request.scheme}://#{request.host}/preorder"
+    #raw URI.encode "#{request.scheme}://#{request.host}/preorder"
+    raw URI.encode "#{request.scheme}://#{request.host}/"
   end
 
   def sold_out(payment_option)

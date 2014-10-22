@@ -12,6 +12,7 @@
   }
   #checkout
   {
+    select,
     input
     {
       padding: 15px;
@@ -20,6 +21,11 @@
       border: 1px solid #CCC;
       width: auto;
       outline: none;
+    }
+    .expires {
+      font-size: 22px;
+      select {
+      }
     }
     .invalid
       {
