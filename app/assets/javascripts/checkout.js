@@ -3,7 +3,6 @@ $(document).ready(function () {
   $('#checkout_loading').hide();
 
   $('#checkout').submit(function (e) {
-    console.log('checkout submit');
     $('#payment_errors').hide();
     $('input, select, textarea').prop('disabled', true);
 
@@ -21,7 +20,6 @@ $(document).ready(function () {
       }, function (status, response) {
         if (status == 200) {
           $('#stripe_token').val(response.id);
-          console.log('stripe token created: ' + response.id);
           _this.submit();
         }
         else {
