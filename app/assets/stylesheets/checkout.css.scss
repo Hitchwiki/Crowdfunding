@@ -240,6 +240,15 @@
     width: 400px;
     float: left;
     margin: 0 40px 40px 0;
+    em {
+      font-style: italic;
+    }
+    b, strong {
+      font-weight: bold;
+    }
+    small {
+      font-size: 17px;
+    }
     .numberlines {
       line-height: 1.1em;
     }
@@ -249,19 +258,22 @@
       padding-right: 4px;
       font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
       background: #fff;
+      small {
+        font-size: 13px;
+      }
     }
-    em {
-      font-style: italic;
-    }
-    b, strong {
-      font-weight: bold;
-    }
+}
+
+.payment-sepa {
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
 }
 
 .payment-description {
   display: block;
   font-size: 15px;
   padding-bottom: 15px;
+  line-height: 1.5em;
   clear: both;
   overflow: hidden;
   a {
@@ -279,4 +291,8 @@
     margin-bottom: 30px;
     line-height: 1.3;
   }
+}
+
+#more_coins {
+  display: none;
 }
