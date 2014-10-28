@@ -7,8 +7,8 @@ module PreorderHelper
     raw "<a href='http://pinterest.com/pin/create/button/?url=#{encoded_root_url}&media=#{image_url}' class='pin-it-button' count-layout='vertical'><img border='0' src='//assets.pinterest.com/images/PinExt.png' title='Pin It' /></a>"
   end
   def tweet_button
-    tweet_text = "I'm #{Settings.primary_stat_verb} number #{number_with_delimiter Order.backers, :delimiter => ","} #{Settings.tweet_text}!"
-    raw "<a href=\"https://twitter.com/share?url=#{encoded_root_url}\" id=\"tweet_button\" class=\"twitter-share-button twitter-button\" data-url=\"#{encoded_root_url}\" data-related=\"nomadwiki,trashwiki,simison,guaka\" data-lang=\"en\" data-text=\"@hitchwiki is organising #hackathon for 5-8 weeks in Turkey. Help to cover their expenses!\">Tweet</a>"
+    #tweet_text = "I'm #{Settings.primary_stat_verb} number #{number_with_delimiter Order.backers, :delimiter => ","} #{Settings.tweet_text}!"
+    raw "<a href=\"https://twitter.com/share?url=#{encoded_root_url}\" id=\"tweet_button\" class=\"twitter-share-button twitter-button\" data-url=\"#{encoded_root_url}\" data-related=\"nomadwiki,trashwiki,simison,guaka\" data-lang=\"en\" data-text=\"#{Settings.tweet_text}\">Tweet</a>"
   end
 
   def video_url

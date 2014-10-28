@@ -96,9 +96,9 @@ dont_give_them_a_reason_to_say_no: "Note that the donation bar is updated manual
 
 # Social Stuff
 facebook_app_id: "139879862696959"
-# Tweets are prefixed with "I'm #{Settings.primary_stat} number X for #{Settings.product_name}"
-# Maybe mention something about your product vision -- e.g. "to replace keys with my phone"
-tweet_text: ""
+
+share_text: "Hitchwiki.org needs a big update. Help them to cover expenses for 5-8 week coding event in Turkey!"
+tweet_text: "@Hitchwiki needs a big update. Help them to cover expenses for 5-8 week coding event in Turkey!"
 
 # Google Analytics
 google_id: "UA-149779-13"
