@@ -8,6 +8,7 @@ gem 'json', '~> 1.7.7'
 group :development do
   gem 'sqlite3'
   gem 'pry-rails'
+  gem 'byebug'
 end
 
 group :production do
@@ -29,7 +30,7 @@ group :development, :test do
 end
 
 # Static files
-source :rubygems
+
 gem 'rack'
 
 # jQuery
