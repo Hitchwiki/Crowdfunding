@@ -12,6 +12,7 @@
   }
   #checkout
   {
+    select,
     input
     {
       padding: 15px;
@@ -20,6 +21,11 @@
       border: 1px solid #CCC;
       width: auto;
       outline: none;
+    }
+    .expires {
+      font-size: 22px;
+      select {
+      }
     }
     .invalid
       {
@@ -234,8 +240,21 @@
     width: 400px;
     float: left;
     margin: 0 40px 40px 0;
+    .numberlines {
+      line-height: 1.1em;
+    }
     .numbers {
+      display: inline-block;
+      padding-left: 4px;
+      padding-right: 4px;
       font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      background: #fff;
+    }
+    em {
+      font-style: italic;
+    }
+    b, strong {
+      font-weight: bold;
     }
 }
 

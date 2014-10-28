@@ -1,6 +1,5 @@
 <% if Settings.payment_processor == "stripe" %>
   <%= javascript_include_tag "https://js.stripe.com/v1/" %>
-  <%= javascript_include_tag "checkout.js" %>
   <script>
     Stripe.setPublishableKey("<%= ENV['STRIPE_PUBLIC_KEY'] || Settings.stripe_public_key %>")
   </script>
@@ -11,6 +10,11 @@
     <div class="main_content <%= "payment_options" if Settings.use_payment_options %>">
 
       <h3>Donate</h3>
+
+      <p>
+        Donations are going via <a href="http://www.abgefahren-ev.de/">Abgefahren e.V.</a> — a german hitchhiking club and a registered nonprofit behind Hitchwiki.org.
+      </p>
+
       <br><br>
 
       <div class="payment-creditcard">
@@ -56,11 +60,14 @@
               <% if Settings.payment_processor == "stripe" %>
                 <%= text_field_tag "card_number", nil, :placeholder => "Card Number", :required => "required", :id => "card_number" %>
                 <%= text_field_tag "cvv", nil, :placeholder => "CVV", :required => "required", :id => "cvv" %>
-                <small class="cvv"><a href="https://www.cvvnumber.com/cvv.html" target="_blank">?</a></small>
-
-                <%= text_field_tag "expires", nil, :placeholder => "Expires mm/yyyy", :required => "required", :id => "expires" %>
+                <div class="expires">
+                Expires: <%= select_tag "expires_month", options_for_select( 01.upto(12).to_a , "01"), :required => "required", :id => "expires_month" %>
+                /
+                <%= select_tag "expires_year", options_for_select( 2014.upto(2029).to_a , "2014"), :required => "required", :id => "expires_year" %>
+                </div>
                 <%= hidden_field_tag :stripe_token %>
                 <%= submit_tag "Donate", :class => "blue_button", :id => "checkout_button" %>
+                <div id="checkout_loading">Wait...</div>
               <% else %>
                 <%= hidden_field_tag "preorder", true %>
                 <%= hidden_field_tag "quantity", params[:quantity] %>
@@ -83,12 +90,16 @@
 
   <div class="payment-sepa">
     <h4>Bank transfer (SEPA)</h4>
-    <p><em>Easiest option for Europeans</em>
+    <p><em>Easiest option for Europeans.</em>
       <br><br>
 
-      IBAN: <span class="numbers">123 123</span><br>
-      BIC/Swift: <span class="numbers">123123</span>
+      <span class="numberlines">
+        IBAN: <span class="numbers">DE48430609671168211500</span><br>
+        BIC/Swift: <span class="numbers">GENODEM1GLS</span>
+      </span>
 
+      <br><br>
+      It's an euro account in German bank.
       <br><br>
       <em>Please note that it'll take a couple of days for these to register and become visible at the donation bar.</em>
 
@@ -96,6 +107,7 @@
   </div>
   <!-- /SEPA -->
 
+  <!--
   <div class="payment-bitcoin">
     <h4>Bitcoins</h4>
     <p>
@@ -105,7 +117,17 @@
     </p>
 
   </div>
+  -->
   <!-- /Bitcoins -->
 
+  </div>
+  </div>
+</div>
+
+<div class="big_wrapper">
+  <div class="wrapper">
+    <div class="point_copy full">
+        <a href="/">Read more about the campaign...</a>
+    </div>
   </div>
 </div>

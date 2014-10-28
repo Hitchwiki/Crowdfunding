@@ -1,15 +1,16 @@
 <div class="gray_background" id='share_container'>
   <div class="wrapper center" id="congrats">
     <h2>
-      Hooray! You've just reserved <%= Settings.product_description %>!
+      Thank you!
     </h2>
-    <p>Congratulations, you're <%= Settings.primary_stat_verb %> number <span id="backer_number"><%= number_with_delimiter Order.backers, :delimiter => "," %></span>,  in supporting <%= Settings.product_name %>. Share the great news!</p>
-    <br />
-    <br />
+    <p>
+      Great! You're our <%= Settings.primary_stat_verb %> number <span id="backer_number"><%= number_with_delimiter Order.backers, :delimiter => "," %></span>, in helping to organize Hitchwiki hackathon.
+      <br><br>
+      Please share our campaign on all channels:
+      <br><br>
+      <a href="<%= encoded_root_url %>"><%= encoded_root_url %></a>
+    </p>
     <div id="share" class="clearfix">
-      <div id='pin_button_container'>
-        <%= pin_it_button %>
-      </div>
       <div id='tweet_button_container'>
         <%= tweet_button %>
       </div>
@@ -17,7 +18,11 @@
         <%= like_button(450, true) %>
       </div>
     </div>
-     <div id="order_id">Reservation ID: <%= @order.uuid %>. You can bookmark or print this page for your records.</div>
+     <p id="order_id">
+       Reservation ID: <%= @order.uuid %>.
+       <br>
+       You can bookmark or print this page for your records.
+     </p>
   </div>
 </div>
 
