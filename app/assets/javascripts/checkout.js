@@ -1,13 +1,7 @@
 $(document).ready(function () {
 
   $('#checkout_loading').hide();
-
-  $("#show_more_coins").click(function(e){
-    e.preventDefault();
-    $(this).hide();
-    $('#more_coins').slideDown('fast');
-  });
-
+    
   $('#checkout').submit(function (e) {
     $('#payment_errors').hide();
     $('input, select, textarea').prop('disabled', true);
