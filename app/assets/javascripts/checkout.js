@@ -4,12 +4,9 @@ $(document).ready(function () {
 
   $('#checkout').submit(function (e) {
     $('#payment_errors').hide();
-    $('input, select, textarea').prop('disabled', true);
-
     $('#checkout_loading').show();
 
-    var _this = this;
-
+      var _this = this;
       e.preventDefault();
 
       Stripe.card.createToken({
