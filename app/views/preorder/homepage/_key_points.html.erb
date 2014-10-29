@@ -21,7 +21,7 @@
         Our plan is to combine Wiki with Maps into one view:
         <br><br>
         <br>
-        <a href="/images/hitchwiki_2015_pre.png" class="lightbox"><%= image_tag("/images/hitchwiki_2015_pre.png", alt: "", width: "100%") %></a>
+        <%= link_to(image_tag("hitchwiki_2015_pre.png", alt: "New Hitchwiki", width: "100%"), asset_path("hitchwiki_2015_pre.png")) %>
         <br>
         <br><br>
 
@@ -73,26 +73,31 @@
     </h3>
     <br><br>
     <div class="point_copy half left">
-      <%= image_tag("/images/mikael.png", alt: "Mikael", width: "100%") %>
+      <%= image_tag("mikael.jpg", alt: "Mikael", class: "geek") %>
       <p>
         Mikael has been developing Hitchwiki since 2008. He is very active with <a href="http://www.mikaelkorpela.fi/volunteering/">projects</a> related to nomadism and free-economics.
       </p>
       </div>
       <div class="point_copy half right">
-        <%= image_tag("/images/remi.png", alt: "Rémi", width: "100%") %>
+        <%= image_tag("remi.jpg", alt: "Rémi", class: "geek") %>
       <p>
         <a href="https://github.com/Remigr">Rémi</a> is more fresh into Hitchwiki but has already helped to organize several hackathons and small <a href="http://hitchgathering.org/">Hitchgatherings</a>.
       </p>
       </div>
 
       <div class="clearfix"></div>
-
-      <div class="point_copy full">
-
+      <div class="point_copy half left">
+        <br><hr><br>
+        <p>
+          <em>"These guys have already done a lot of amazing work for Hitchwiki, I am completely convinced they will do a great job in Turkey and I'm happily putting some of my own money to support this endeavor. I can't wait to see maps more integrated in the wiki!"</em><br>
+          <small class="bread">— <a href="http://kasper.re">Kasper</a>, Hitchwiki co-founder</small>
+        </p>
+      </div>
+      <div class="point_copy half right">
         <br><hr/><br>
-
         <p class="bread">We are two now but we're also open for talented and experienced developers joining us (MediaWiki, PHP, JavaScript). This time we would like to form a tiny and effective team of people who could contribute several weeks of full time work for this, rather than have guests visiting and helping for shorter times (as we've had before). Smaller team (or just two of us) is also easier to coordinate. If you'd be interested to come, please <a href="#contact">contact us</a> and tell about yourself ! You're also always welcome to <a href="https://github.com/Hitchwiki/">send</a> smaller patches and participate in discussions.</p>
       </div>
+      <div class="clearfix"></div>
 
   </div>
 </div>

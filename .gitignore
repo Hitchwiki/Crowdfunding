@@ -23,3 +23,7 @@ config/environments/*.local.yml
 
 # yes, I use an ide
 .idea/*
+
+
+# Precompiled assets
+public/assets/*
