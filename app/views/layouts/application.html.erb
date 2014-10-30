@@ -17,17 +17,27 @@
     <meta name="twitter:description" content="<%= Settings.share_text %>">
     <meta name="twitter:url" content="<%= encoded_root_url %>">
     <meta name="twitter:image" content="<%= encoded_root_url[0..-1] %><%= asset_path("lisbon-roof.jpg") %>">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
-    <link href="//fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext,latin,cyrillic,greek" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" href="//hitchwiki.org/favicon.png" type="image/png" />
-    <link rel="bookmark icon" href="//hitchwiki.org/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="<%= asset_path("favicon.png") %>" type="image/png" />
+    <link rel="bookmark icon" href="<%= asset_path("favicon.png") %>" type="image/png" />
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Open+Sans::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); </script>
   </head>
   <!--[if lt IE 9 ]><body class="lt-ie9"><![endif]-->
   <!--[if (gt IE 9)|!(IE)]><!--> <body><!--<![endif]-->
