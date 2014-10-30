@@ -12,7 +12,7 @@ project_goal: 1500
 # If you want to edit the FAQ, head over to app/views/preorder/homepage/_faqs.html.erb
 
 # This'll be both the page title (<title></title>) and the name in the header
-product_name: "Help to organize a Hitchwiki Hackathon"
+product_name: "Help to cover expenses for Hitchwiki hackathon in Turkey."
 
 # This will be used in sentences like Hooray You've just reserved product_description
 product_description: "Hitchwiki love"
@@ -84,7 +84,7 @@ progress_text: "Implemented"
 # Call to action section
 
 # On Lockitron, it's "First Batch Ships in March 2013"
-ships: "Help to organize Hitchwiki hackathon in Turkey."
+ships: "Help to cover expenses of Hitchwiki hackathon in Turkey."
 
 # On Lockitron, it's "Reserve Now"
 call_to_action: "Donate"

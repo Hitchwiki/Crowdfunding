@@ -35,6 +35,18 @@ Let's get it running:
 rails s
 ```
 
+### Production
+
+Start|stop|restart the server
+```bash
+sh scripts/production.sh {start|stop|restart}
+```
+
+Build assets, restarts the server after
+```bash
+sh scripts/production.sh assets
+```
+
 ### Customizing
 
 While it is *just* a skeleton, we did make it a little quicker to change around things like your product name, the colors, pricing, etc.

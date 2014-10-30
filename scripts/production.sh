@@ -1,7 +1,7 @@
 #!/bin/sh
 
 USER_HOME=/home/simison
-APP=/srv/www/hitchwiki.net/public_html/hackathon
+APP=/srv/www/hitchwiki.net/donate.hitchwiki
 PORT=3000
 
 # Set RBENV the environment, as required by Monit
@@ -26,7 +26,7 @@ stop () {
 
 assets () {
   cd $APP
-  bundle exec rake RAILS_ENV=production RAILS_GROUPS=assets assets:precompile --trace
+  bundle exec rake RAILS_ENV=production assets:precompile --trace
 }
 
 case $1 in

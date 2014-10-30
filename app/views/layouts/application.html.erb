@@ -12,11 +12,12 @@
     <meta property="og:description" content="<%= Settings.share_text %>">
     <meta property="og:url" content="<%= encoded_root_url %>">
     <meta property="og:image" content="http://hitchwiki.org/en/images/en/5/52/Hw-sticker-7x7cm%2B2mm-bleed.jpg">
+    <meta property="og:image" content="<%= encoded_root_url[0..-1] %><%= asset_path("lisbon-roof.jpg") %>">
     <meta property="og:type" content="website">
     <meta name="twitter:title" content="<%= Settings.product_name %>">
     <meta name="twitter:description" content="<%= Settings.share_text %>">
     <meta name="twitter:url" content="<%= encoded_root_url %>">
-    <meta name="twitter:image" content="http://hitchwiki.org/en/images/en/5/52/Hw-sticker-7x7cm%2B2mm-bleed.jpg">
+    <meta name="twitter:image" content="<%= encoded_root_url[0..-1] %><%= asset_path("lisbon-roof.jpg") %>">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
