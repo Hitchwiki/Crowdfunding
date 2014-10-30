@@ -2,10 +2,31 @@
   <div class="wrapper">
     <div class="point_copy full">
       <h4>Discussion</h4>
-      <div class="comments-alternative">
-        <p>If you don't want to use Facebook to communicate, you can send us email <img src="http://hitchwiki.org/wordpress/wp-content/plugins/hitchwiki/img/contact.png" alt="Contact us" />, <a target="_blank" href="http://hitchwiki.org/chat/">chat</a> with us or <a target="_blank" href="http://hitchwiki.org/groups/hitchwiki/">comment at Hitchwiki.org</a>.</p>
-      </div>
+      <!--
+      FB is poo
       <div class="fb-comments" data-href="<%= encoded_root_url %>" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
+      -->
+
+      <!-- Yeah this sucks as much, but can't be helped now. -->
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'hitchwikihackathon2014'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      <div class="comments-alternative">
+        <br>
+        <p>You can also send us email <img src="http://hitchwiki.org/wordpress/wp-content/plugins/hitchwiki/img/contact.png" alt="Contact us" />, <a target="_blank" href="http://hitchwiki.org/chat/">chat</a> with us or <a target="_blank" href="http://hitchwiki.org/groups/hitchwiki/">comment at Hitchwiki.org</a>.</p>
+      </div>
+
     </div>
   </div>
 </div>
