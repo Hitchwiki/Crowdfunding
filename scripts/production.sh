@@ -17,7 +17,7 @@ export PATH="$USER_HOME/.gem/bin:$PATH"
 
 start () {
   cd $APP
-  BUNDLE_GEMFILE=$APP/Gemfile bundle exec rails s -d -p $PORT -e production
+  HTTPS=on BUNDLE_GEMFILE=$APP/Gemfile bundle exec rails s -d -p $PORT -e production
 }
 
 stop () {

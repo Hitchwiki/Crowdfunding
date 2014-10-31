@@ -1,14 +1,14 @@
 module PreorderHelper
   def like_button(width = 70, show_faces = false)
-    raw "<div class=\"fb-like\" data-send=\"false\" data-width=\"#{width}\" data-layout=\"button_count\" data-show-faces=\"true\" data-href=\"#{encoded_share_url}\"></div>"
+    raw "<div class=\"fb-like\" data-send=\"false\" data-width=\"#{width}\" data-layout=\"button_count\" data-show-faces=\"true\" data-href=\"#{encoded_root_url}\"></div>"
   end
   def pin_it_button
     image_url = URI.encode("#{request.scheme}://#{request.host}#{image_path(Settings.product_image_path)}")
-    raw "<a href='http://pinterest.com/pin/create/button/?url=#{encoded_share_url}&media=#{image_url}' class='pin-it-button' count-layout='vertical'><img border='0' src='//assets.pinterest.com/images/PinExt.png' title='Pin It' /></a>"
+    raw "<a href='http://pinterest.com/pin/create/button/?url=#{encoded_root_url}&media=#{image_url}' class='pin-it-button' count-layout='vertical'><img border='0' src='//assets.pinterest.com/images/PinExt.png' title='Pin It' /></a>"
   end
   def tweet_button
     #tweet_text = "I'm #{Settings.primary_stat_verb} number #{number_with_delimiter Order.backers, :delimiter => ","} #{Settings.tweet_text}!"
-    raw "<a href=\"https://twitter.com/share?url=#{encoded_share_url}\" id=\"tweet_button\" class=\"twitter-share-button twitter-button\" data-url=\"#{encoded_share_url}\" data-related=\"nomadwiki,trashwiki,simison,guaka\" data-lang=\"en\" data-text=\"#{Settings.tweet_text}\">Tweet</a>"
+    raw "<a href=\"https://twitter.com/share?url=#{encoded_root_url}\" id=\"tweet_button\" class=\"twitter-share-button twitter-button\" data-url=\"#{encoded_root_url}\" data-related=\"nomadwiki,trashwiki,simison,guaka\" data-lang=\"en\" data-text=\"#{Settings.tweet_text}\">Tweet</a>"
   end
 
   def video_url
@@ -20,11 +20,6 @@ module PreorderHelper
     else
       ''
     end
-  end
-
-  def encoded_share_url
-    #raw URI.encode "#{request.scheme}://#{request.host}/preorder"
-    raw URI.encode "http://donate.hitchwiki.net/"
   end
 
   def encoded_root_url

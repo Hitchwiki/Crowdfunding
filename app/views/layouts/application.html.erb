@@ -10,13 +10,13 @@
     <meta property="og:site_name" content="<%= Settings.product_name %>">
     <meta property="og:title" content="<%= Settings.product_name %>">
     <meta property="og:description" content="<%= Settings.share_text %>">
-    <meta property="og:url" content="<%= encoded_root_url %>">
-    <meta property="og:image" content="<%= encoded_root_url[0..-1] %><%= asset_path("lisbon-roof.jpg") %>">
+    <meta property="og:url" content="<%= root_url %>">
+    <meta property="og:image" content="<%= "#{request.protocol}#{request.host_with_port}#{asset_path("lisbon-roof.jpg")}" %>">
     <meta property="og:type" content="website">
     <meta name="twitter:title" content="<%= Settings.product_name %>">
     <meta name="twitter:description" content="<%= Settings.share_text %>">
-    <meta name="twitter:url" content="<%= encoded_root_url %>">
-    <meta name="twitter:image" content="<%= encoded_root_url[0..-1] %><%= asset_path("lisbon-roof.jpg") %>">
+    <meta name="twitter:url" content="<%= root_url %>">
+    <meta name="twitter:image" content="<%= "#{request.protocol}#{request.host_with_port}#{asset_path("lisbon-roof.jpg")}" %>">
     <!--[if lt IE 9]>
       <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
