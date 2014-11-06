@@ -60,8 +60,18 @@
 
               <%= email_field_tag "email", nil, :placeholder => "Email address", :required => "required", :id => "email" %>
               <% if Settings.payment_processor == "stripe" %>
+                <%= text_field_tag "name", nil, :placeholder => "Cardholder name", :id => "name" %>
                 <%= text_field_tag "card_number", nil, :placeholder => "Card Number", :required => "required", :id => "card_number" %>
                 <%= text_field_tag "cvv", nil, :placeholder => "CVV", :required => "required", :id => "cvv", :size => 4 %>
+                <details class=''>
+                  <summary>Add address..</summary>
+                  <%= text_field_tag "address_line1", nil, :placeholder => "Address", :id => "address_line1" %>
+                  <%= text_field_tag "address_line2", nil, :placeholder => "Appartment", :id => "address_line2" %>
+                  <%= text_field_tag "address_city", nil, :placeholder => "City", :id => "address_city" %>
+                  <%= text_field_tag "address_state", nil, :placeholder => "State", :id => "address_state" %>
+                  <%= text_field_tag "address_zip", nil, :placeholder => "Zip number / Postal code", :id => "address_zip" %>
+                  <%= text_field_tag "address_country", nil, :placeholder => "Country", :id => "address_country" %>
+                </details>
                 <div class="expires">
                 Expires: <%= select_tag "expires_month", options_for_select( 01.upto(12).to_a , "01"), :required => "required", :id => "expires_month" %>
                 /
